@@ -1,0 +1,7 @@
+<p>user-name works!</p>
+
+<label for="">User name</label>
+<input type="text" class="form-control" [(ngModel)]="userName">
+<p>{{ userName }}</p>
+<button class="btn btn-primary"
+[disabled]="userName.trim() == '' " (click)="resetName()" >Reset User name</button>

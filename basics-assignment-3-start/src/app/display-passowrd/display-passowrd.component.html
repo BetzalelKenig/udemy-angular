@@ -1,0 +1,10 @@
+
+<label for="display"></label>
+<button id="display"  class="btn btn-primary" (click)="display()">Display Details</button>
+<p *ngIf="show">Secret Password = 1234</p>
+<ul>
+    <li *ngFor="let click of clicks; let i = index" 
+    [ngStyle]="{backgroundColor: i > 4 ? 'blue' : 'transparent'}"
+    [ngClass]="{'five': i > 4}"
+    >{{ click }}</li>
+</ul>
