@@ -16,4 +16,6 @@
   </div>
 </div>
 
-<app-game-control></app-game-control>
+<app-game-control (emitnumbers)="onInterval($event)"></app-game-control>
+<app-odd *ngFor="let odd of oddArr" [n]="odd"></app-odd>
+<app-even *ngFor="let even of evenArr" [n]="even"></app-even>
