@@ -15,5 +15,11 @@ export class ShopingListComponent implements OnInit {
 
   ngOnInit(): void {
     this.ingredients = this.slService.getIngredients();
+    this.slService.ingredientsChaged
+      .subscribe(
+        (ingredients: Ingredient[]) => {
+          this.ingredients = ingredients;
+        }
+      )
   }
 }
